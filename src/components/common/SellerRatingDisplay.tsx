@@ -12,7 +12,7 @@ interface SellerRatingDisplayProps {
 
 export function SellerRatingDisplay({ average, count }: SellerRatingDisplayProps) {
   if (count === 0) {
-    return <NoRatings data-testid="no-ratings">No ratings yet</NoRatings>;
+    return null;
   }
 
   return (
@@ -32,11 +32,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
-`;
-
-const NoRatings = styled.span`
-  font-size: ${({ theme }) => theme.fontSize.xs};
-  color: ${({ theme }) => theme.text.secondary};
 `;
 
 const RatingText = styled.div`

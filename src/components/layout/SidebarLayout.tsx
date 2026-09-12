@@ -61,6 +61,7 @@ export const SidebarItem = styled.button<{ $active?: boolean }>`
   color: ${({ theme, $active }) => ($active ? theme.text.inverse : theme.text.primary)};
   font-size: ${({ theme }) => theme.fontSize.base};
   font-weight: ${({ $active, theme }) => ($active ? theme.fontWeight.semibold : theme.fontWeight.medium)};
+  font-family: ${({ theme }) => theme.fontFamilyAlt};
   transition: all ${({ theme }) => theme.transition.slow};
   white-space: nowrap;
   cursor: pointer;

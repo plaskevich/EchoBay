@@ -189,6 +189,7 @@ export function MobileFilterPanel({ onApply }: MobileFilterPanelProps) {
 
 const MobileFilterButton = styled(FilterButton)`
   display: none;
+  font-family: ${({ theme }) => theme.fontFamilyAlt};
 
   @media (max-width: ${breakpoint.sm}) {
     display: flex;

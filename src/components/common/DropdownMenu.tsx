@@ -175,6 +175,8 @@ const dropdownItemStyles = css`
   width: 100%;
   box-sizing: border-box;
   font-size: ${({ theme }) => theme.fontSize.base};
+  font-family: ${({ theme }) => theme.fontFamilyAlt};
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${(props) => props.theme.text.primary};
   text-decoration: none;
   user-select: none;

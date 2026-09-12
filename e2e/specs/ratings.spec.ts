@@ -93,20 +93,18 @@ test.describe('Ratings', () => {
   });
 
   test.describe('No Ratings', () => {
-    test('shows "No ratings yet" on item detail seller card', async ({ page }) => {
+    test('hides the rating on item detail seller card', async ({ page }) => {
       await page.goto(`/items/${listingId}`);
 
       await expect(page.getByTestId('seller-card')).toBeVisible();
-      await expect(page.getByTestId('no-ratings')).toBeVisible();
-      await expect(page.getByTestId('no-ratings')).toHaveText('No ratings yet');
+      await expect(page.getByTestId('seller-rating')).not.toBeVisible();
     });
 
-    test('shows "No ratings yet" on seller profile page', async ({ page }) => {
+    test('hides the rating on seller profile page', async ({ page }) => {
       await page.goto(`/users/${sellerId}`);
 
       await expect(page.getByTestId('profile-header')).toBeVisible();
-      await expect(page.getByTestId('no-ratings')).toBeVisible();
-      await expect(page.getByTestId('no-ratings')).toHaveText('No ratings yet');
+      await expect(page.getByTestId('seller-rating')).not.toBeVisible();
     });
   });
 
@@ -166,11 +164,11 @@ test.describe('Ratings', () => {
       await expect(page.getByTestId('seller-rating')).toContainText('(1 rating)');
     });
 
-    test('shows rating on own profile page', async ({ page }) => {
+    test('hides rating on own unrated profile page', async ({ page }) => {
       await page.goto('/profile');
 
       await expect(page.getByTestId('profile-header')).toBeVisible();
-      await expect(page.getByTestId('no-ratings')).toBeVisible();
+      await expect(page.getByTestId('seller-rating')).not.toBeVisible();
     });
   });
 });

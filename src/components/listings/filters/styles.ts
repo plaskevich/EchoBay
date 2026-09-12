@@ -15,7 +15,7 @@ export const FilterButton = styled.button<{ $active?: boolean; $open?: boolean }
   background-color: ${({ theme }) => theme.background.primary};
   color: ${({ theme }) => theme.text.primary};
   font-size: ${({ theme }) => theme.fontSize.sm};
-  font-weight: ${({ $active, theme }) => ($active ? theme.fontWeight.semibold : theme.fontWeight.regular)};
+  font-weight: ${({ $active, theme }) => ($active ? theme.fontWeight.semibold : theme.fontWeight.medium)};
   transition: all ${({ theme }) => theme.transition.base};
   white-space: nowrap;
   &:hover {
@@ -174,6 +174,7 @@ export const DropdownApplyButton = styled.button`
   color: ${({ theme }) => theme.text.inverse};
   font-size: ${({ theme }) => theme.fontSize.sm};
   font-weight: ${({ theme }) => theme.fontWeight.semibold};
+  font-family: ${({ theme }) => theme.fontFamilyAlt};
   transition: all ${({ theme }) => theme.transition.fast};
 
   &:hover {

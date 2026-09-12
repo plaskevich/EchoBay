@@ -116,7 +116,7 @@ const StyledButton = styled.button.withConfig({
     color ${({ theme }) => theme.transition.base},
     transform ${({ theme }) => theme.transition.fast},
     opacity ${({ theme }) => theme.transition.base};
-  font-family: inherit;
+  font-family: ${({ theme }) => theme.fontFamilyAlt};
   white-space: nowrap;
   user-select: none;
   box-sizing: border-box;

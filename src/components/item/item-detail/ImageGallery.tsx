@@ -159,6 +159,7 @@ const StatusBanner = styled.div<{ $status: ListingStatus }>`
   background-color: ${(props) =>
     props.$status === 'sold' ? props.theme.primary.main : props.theme.background.tertiary};
   color: ${(props) => (props.$status === 'sold' ? props.theme.text.inverse : props.theme.text.primary)};
+  font-family: ${({ theme }) => theme.fontFamilyAlt};
   font-size: 1.2rem;
   font-weight: ${({ theme }) => theme.fontWeight.semibold};
   display: inline-flex;

@@ -132,6 +132,7 @@ export const FileInput = styled.input`
     color: ${(props) => props.theme.text.inverse};
     cursor: pointer;
     font-weight: ${({ theme }) => theme.fontWeight.medium};
+    font-family: ${({ theme }) => theme.fontFamilyAlt};
 
     &:hover {
       background-color: ${(props) => props.theme.black.light};
